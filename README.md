@@ -1,18 +1,17 @@
-                    ___________________________________
 
-                    Light PHP wrapper for the OAuth 2.0
-                    ___________________________________
+Light PHP wrapper for the OAuth 2.0
+===================================
 
 
 REASON FOR FORK
-===============
+---------------
 
 The OAuth2 spec is particularly ambiguous concerning the method for retrieving
-an access_token.  This fork uses GET instead of POST.
+an `access_token`.  This fork uses GET instead of POST.
 
 
 AUTHOR & CONTACT
-================
+----------------
 
 Charron Pierrick
     - pierrick@webstart.fr
@@ -22,7 +21,7 @@ Berejeb Anis
 
 
 DOCUMENTATION & DOWNLOAD
-========================
+------------------------
 
 Latest version is available on github at :
     - https://github.com/adoy/PHP-OAuth2
@@ -32,7 +31,7 @@ Documentation can be found on :
 
 
 LICENSE
-=======
+-------
 
 This Code is released under the GNU LGPL
 
@@ -50,10 +49,10 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 See the GNU Lesser General Public License for more details.
 
 
-How can I use it ?
-==================
+How can I use it?
+-----------------
 
-```python
+```php
 require('client.php');
 require('GrantType/IGrantType.php');
 require('GrantType/AuthorizationCode.php');
@@ -83,12 +82,13 @@ else
 }
 ```
 
-How can I add a new Grant Type ?
-================================
+How can I add a new Grant Type?
+-------------------------------
+
 Simply write a new class in the namespace OAuth2\GrantType. You can place the class file under GrantType.
 Here is an example :
 
-```
+```php
 namespace OAuth2\GrantType;
 
 /**
@@ -123,6 +123,6 @@ class MyCustomGrantType implements IGrantType
 }
 ```
 
-call the OAuth client getAccessToken with the grantType you defined in the GRANT_TYPE constant, As following :
+Call the OAuth client getAccessToken with the grantType you defined in the GRANT_TYPE constant, As following :
 `$response = $client->getAccessToken(TOKEN_ENDPOINT, 'my_custom_grant_type', $params);`
 
