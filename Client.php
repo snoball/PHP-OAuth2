@@ -231,7 +231,7 @@ class Client
                 break;
         }
 
-        return $this->executeRequest($token_endpoint, $parameters, self::HTTP_METHOD_POST, $http_headers, self::HTTP_FORM_CONTENT_TYPE_APPLICATION);
+        return $this->executeRequest($token_endpoint, $parameters, self::HTTP_METHOD_GET, $http_headers, self::HTTP_FORM_CONTENT_TYPE_APPLICATION);
     }
 
     /**
